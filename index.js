@@ -23,9 +23,7 @@ $(function() {
     var formElement = $('#js-shopping-list-form');
     var listElement = $('.js-shopping-list');
     var newItemIdentifier = '#js-shopping-list-entry';
-
     var itemCrossOf = '.js-shopping-item-crossOf';
-    var itemDataAttr = 'data-list-item-id';
 
     handleAddItem(formElement, listElement, newItemIdentifier);
     handleCrossOfItem(listElement, itemCrossOf, state);
