@@ -39,8 +39,8 @@ function handleAddItem(formElement, listElement, newItemIdentifier) {
 
         if (document.getElementById('js-shopping-list-entry').value != '') {
 
-            addItem(state, $('input').val()); //add new item to state object
-            renderGroceryList(state, $(listElement)); //add new item to 
+            addItem(state, $('input').val());          //add new item to state object
+            renderGroceryList(state, $(listElement));  //add new item element to HTML 
             this.reset(); // clear input
         }
     });
