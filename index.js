@@ -17,7 +17,7 @@ var groceryItemElement = (
     '</li>');
 
 
-// 
+// function to handle the events
 $(function() {
 
     var formElement = $('#js-shopping-list-form');
@@ -39,8 +39,8 @@ function handleAddItem(formElement, listElement, newItemIdentifier) {
 
         if (document.getElementById('js-shopping-list-entry').value != '') {
 
-            addItem(state, $('input').val());          //add new item to state object
-            renderGroceryList(state, $(listElement));  //add new item element to HTML 
+            addItem(state, $('input').val());          // add new item to state object
+            renderGroceryList(state, $(listElement));  // add new item element to HTML 
             this.reset(); // clear input
         }
     });
@@ -50,7 +50,7 @@ function handleCrossOfItem(listElement, itemCrossOf, state) {
 
     listElement.on('click', 'li', function(event) {
 
-        if ($(event.target).text() === 'Delete') {                    //delete item
+        if ($(event.target).text() === 'Delete') {                  // delete item
             
             var purged = state.items.splice(($(this).index()));
             this.remove();
@@ -60,10 +60,10 @@ function handleCrossOfItem(listElement, itemCrossOf, state) {
             var itemIndex = ($(this).index());
             
             if (state.items[itemIndex].crossOfList === false) {
-                state.items[itemIndex].crossOfList = true;         //cross of the list
+                state.items[itemIndex].crossOfList = true;         // cross of the list
             } 
             else {
-                state.items[itemIndex].crossOfList = false;        //restore item to the list
+                state.items[itemIndex].crossOfList = false;        // restore item to the list
             }
 
             renderGroceryList(state, $(listElement));
@@ -74,7 +74,7 @@ function handleCrossOfItem(listElement, itemCrossOf, state) {
 // state modification functions
 var addItem = function(state, item) {
     state.items.push({
-        groceryItem: item,  //input value from add item form
+        groceryItem: item,  // input value from add item form
         crossOfList: false, // initialize var to keep track of state of item, i.e. still on list or crossed of
     });
 };
@@ -86,13 +86,13 @@ var renderGroceryList = function(state, element) {
         return renderGroceryItem(item, index, groceryItemElement);
     });
 
-    element.html(itemsHTML); //set HTML element
+    element.html(itemsHTML); // set HTML element
 
 };
 
 function renderGroceryItem(item, itemId, groceryItemElement) {
 
-    var element = $(groceryItemElement); //element with item name and checked and delete buttons
+    var element = $(groceryItemElement); // element with item name and checked and delete buttons
 
     element.find('.js-shopping-item').text(item.groceryItem);
 
