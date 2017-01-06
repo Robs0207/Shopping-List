@@ -7,7 +7,7 @@ Included Javascript and jQuery coding in the index.js file in order to get a wor
 
 The coding included:
 
-- jQuery event listeners in order to react to adding an item to the grocery list, crossing of an item, restoring an ietm and delting an item.
-- jQuery was used for the DOM manipulation to dynamically add html coding to depict the state changes of the grocery items.
+- jQuery event listeners in order to react to adding an item to the grocery list, crossing of an item, restoring an item and deleting an item.
+- jQuery was used for the DOM manipulation to dynamically add HTML elements to depict the state changes of the grocery items.
 - JS was used to handle the conditional flow between the deletion, crossing of and restoring of an item.
 
